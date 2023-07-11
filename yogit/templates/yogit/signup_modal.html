@@ -1,0 +1,62 @@
+<div id="signup-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <form method="post">
+            {% csrf_token %}
+            <header class="modal-card-head">
+                <p class="modal-card-title">Sign Up</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field">
+                    <label for="" class="label">Username</label>
+                    <div class="control has-icons-left">
+                        <input type="text" placeholder="Yogi" name="username" class="input" required>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Email</label>
+                    <div class="control has-icons-left">
+                        <input type="email" placeholder="e.g. yogi@email.com" name="email" class="input" required>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Password</label>
+                    <div class="control has-icons-left">
+                        <input type="password" placeholder="*******" name="password" class="input" required>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Password confirmation</label>
+                    <div class="control has-icons-left">
+                        <input type="password" placeholder="*******" name="confirmation" class="input" required>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <div class="field has-text-centered">
+                    <div class="failed-auth-message has-text-danger"></div>
+                    <input class="button is-success" type="submit" value="Sign up">
+                    <input class="button is-danger cancel" type="reset" value="Cancel">
+                </div>
+                <div class="has-text-centered">
+                    <a class="button is-light is-size-7" id="switch-to-login-modal">
+                        Already have an account? Log in here.
+                    </a>
+                </div>
+            </footer>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Yogit{% endblock %}</title>
+    <link rel="icon" href="{% static 'yogit/favicon.svg' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="{% static 'yogit/styles.css' %}">
+    <script src="https://kit.fontawesome.com/9c1d9ed11d.js" crossorigin="anonymous"></script>
+    <script src="{% static 'yogit/hamburgerMenu.js' %}"></script>
+    <script src="{% static 'yogit/main.js' %}" type="module"></script>
+    <script src="{% static 'yogit/authentificationModals.js' %}" type="module"></script>
+    <script src="{% static 'yogit/sequenceModals.js' %}" type="module"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </head>
+  <body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{% url 'main' %}">
+          <h1 id="yogit-h1" class="title is-2">
+            Y<i class="fa-regular fa-face-smile-beam fa-fade fa-sm""></i>GIT
+          </h1>
+        </qa>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbar-menu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" id="view-index">
+            Home
+          </a>
+          <a class="navbar-item" id="view-poses" data-target="all-poses">
+            Poses
+          </a>
+          {% if user.is_authenticated %}
+          <a class="navbar-item" id="view-favourites" data-target="saved-poses">
+            Favourites
+          </a>
+          <a class="navbar-item" id="view-sequences">
+            Sequences
+          </a>
+          {% endif %}
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+            {% if user.is_authenticated %}
+              <button class="button is-ghost">
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fa-solid fa-user"></i>
+                  </span>
+                  <span>
+                    {{ user.username }}
+                  </span>
+                </span>
+              </button>
+              <a class="button is-dark" href="{% url 'logout' %}">
+                Log out
+              </a>
+            {% else %}
+              <a class="button is-primary" id="signup" href="#" data-target="signup-modal">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light" id="login" href="#" data-target="login-modal">
+                Log in
+              </a>
+            {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    {% block body %}{% endblock %}
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+            <strong>Yogit</strong> by Gabriel Houx.
+            Data courtesy of <a href="https://github.com/alexcumplido/yoga-api"><strong>Alexandre Cumplido Bou</strong></a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

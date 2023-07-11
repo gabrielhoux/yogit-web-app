@@ -1,0 +1,41 @@
+<div id="poses-view">
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title" id="poses-view-title"></h1>
+                <p class="subtitle" id="poses-view-subtitle"></p>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="field is-horizontal box">
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input id="search-filter" class="input" type="text" placeholder="Search for a pose">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="select">
+                        <select class="control" id="type-filter">
+                            <option value="">Yoga type</option>
+                        </select>
+                    </div>
+                    <div class="select">
+                        <select class="control" id="difficulty-filter">
+                            <option value="">Difficulty level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="columns is-multiline" id="yoga-poses">
+        </div>
+    </section>
+</div>

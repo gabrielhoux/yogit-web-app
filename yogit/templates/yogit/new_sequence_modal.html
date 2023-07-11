@@ -1,0 +1,35 @@
+<div id="new-sequence-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <form method="post">
+            {% csrf_token %}
+            <header class="modal-card-head">
+                <p class="modal-card-title">New Yoga Sequence</p>
+                <button class="delete" aria-label="close" type="reset"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field">
+                    <label for="" class="label">Name</label>
+                    <div class="control">
+                        <input type="text" placeholder="My Yoga Sequence" name="name" class="input" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="" class="label">Description (optional)</label>
+                    <div class="control">
+                        <textarea placeholder="Describe your yoga sequence" name="description" class="input"></textarea>
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <div class="field has-text-centered">
+                    <div class="error-message has-text-danger"></div>
+                    <p class="control">
+                        <input class="button is-success" type="submit" value="Create New Sequence">
+                        <input class="button is-danger cancel" type="reset" value="Cancel">
+                    </p>
+                </div>
+            </footer>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{% load static %}
+
+<div id="sequences-view">
+    <section class="section">
+        <div class="columns">
+            <div class="column is-three-quarters-desktop is-full-mobile">
+                <h1 class="title">Your Sequences</h1>
+            </div>
+            <div class="column is-half-desktop is-full-mobile">
+                <button class="button is-success is-medium" id="create-sequence">
+                    <span class="icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+                    <p>Create New Sequence</p>
+                </button>
+            </div>
+        </div>
+        <div id="add-pose-svg" src="{% static 'yogit/addpose.svg' %}" style="display: none;"></div>
+        <div id="sequences-container" class="container is-fluid">
+        </div>
+    </section>
+</div>
