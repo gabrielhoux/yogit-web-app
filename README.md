@@ -2,6 +2,8 @@
 
 Yogit is my submission for Capstone, CS50W's final project. It's a web app designed with Django and JavaScript as both a yoga pose encyclopedia and sequence builder.
 
+Most of the yoga poses data was sourced from [Alex Cumplido's Yoga API](https://github.com/alexcumplido/yoga-api).
+
 # BACK-END
 
 ## load_yoga_poses.py
@@ -106,6 +108,5 @@ The `styles.scss` contains all the necessary CSS tweaks and manipulations I've m
 
 # INSTALLATION & HOW TO RUN
 
-To install and run Yogit, make sure to first install the required modules listed in the `requirements.txt` file, located within the app's folder, `capstone/yogit`. For this, you can simply enter the command `pip install -r requirements.txt` in your terminal, once you have entered `cd capstone` to first move the terminal's focus to the project's folder.
+To install and run Yogit, make sure to first install the required modules listed in the `requirements.txt` file, located within the app's folder, `yogit-web-app/yogit`. For this, you can simply enter the command `pip install -r requirements.txt` in your terminal, once you have entered `cd capstone` to first move the terminal's focus to the project's folder.
 Once all requirements have been installed, you can run the web application by entering the command `python manage.py runserver` in your terminal, and access the app from the link provided in the terminal.
->>>>>>> a97ca14 (initial commit)
