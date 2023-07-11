@@ -1,0 +1,49 @@
+<div id="add-pose-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <form method="post">
+            {% csrf_token %}
+            <header class="modal-card-head">
+                <p class="modal-card-title">Choose one or more yoga poses to add</p>
+                <button class="delete" aria-label="close" type="reset"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field is-horizontal box" id="add-pose-modal-filters">
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input id="modal-search-filter" class="input" type="text" placeholder="Search for a pose">
+                                <span class="icon is-small is-left">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="select">
+                            <select class="control" id="modal-type-filter">
+                                <option value="">Yoga type</option>
+                            </select>
+                        </div>
+                        <div class="select">
+                            <select class="control" id="modal-difficulty-filter">
+                                <option value="">Difficulty level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="expert">Expert</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <fieldset id="poses-fieldset">
+                    <div class="columns is-multiline" id="yoga-poses"></div>
+                </fieldset>
+            </section>
+            <footer class="modal-card-foot">
+                <div class="error-message has-text-danger"></div>
+                <div class="field has-text-centered">
+                    <input class="button is-success" type="submit" value="Add selected pose">
+                    <input class="button is-danger cancel" type="reset" value="Cancel">
+                </div>
+            </footer>
+        </form>
+    </div>
+</div>

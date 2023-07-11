@@ -1,0 +1,83 @@
+.navbar-brand {
+  i {
+    color: white;
+  }
+}
+
+#index-view {
+  .section {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: center;
+    background-position-y: center;
+  }
+}
+
+.pose-card, .add-pose-card {
+  .image {
+    padding-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: rgba(250, 245, 245, 0.7);
+    cursor: pointer;
+  }
+}
+
+#add-pose-modal {
+  .pose-card {
+    .image {
+      padding-bottom: 5px;
+    }
+    &:hover {
+      background-color: none;
+      cursor: auto;
+    }
+  }
+}
+
+.modal {
+  form {
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+
+    /* For webkit-based browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+  }
+
+  .modal-card-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+
+  .modal-card-foot {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    padding: 1rem;
+  }
+}
+
+.sequence-card {
+  margin-bottom: 10px;
+}
+
+#return {
+  display: inline-block;
+}
+
+.has-yellow-shadow {
+  box-shadow: 4px 4px 2px 1px hsl(44, 100%, 77%);
+}
+
+.modal-card-foot {
+  display: block;
+}

@@ -1,0 +1,59 @@
+{% extends "yogit/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <!-- Main views -->
+
+    <div id="index-view">
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">
+                        Hello there
+                    </h1>
+                    <p class="subtitle" id="h1-subtitle">
+                        Welcome to <strong>Yogit</strong>!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section is-large" style="background-image: url('{{ pose_svg }}');">
+            <div class="columns is-multiline is-centered">
+                <div class="column is-three-quarters has-text-centered">
+                    <button id="view-poses" class="button is-large has-yellow-shadow">All yoga poses</button>
+                </div>
+                {% if user.is_authenticated %}
+                <div class="column is-three-quarters has-text-centered">
+                    <button id="view-favourites" class="button is-large has-yellow-shadow">Your favourite poses</button>
+                </div>
+                <div class="column is-three-quarters has-text-centered">
+                    <button id="view-sequences" class="button is-large has-yellow-shadow">Your sequences</button>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+    </div>
+
+    {% include 'yogit/poses_view.html' %}
+
+    {% include 'yogit/pose_details_view.html' %}
+
+    {% include 'yogit/sequences_view.html' %}
+
+
+    <!-- Modals -->
+
+    {% include 'yogit/new_sequence_modal.html' %}
+
+    {% include 'yogit/edit_sequence_modal.html' %}
+
+    {% include 'yogit/delete_sequence_modal.html' %}
+
+    {% include 'yogit/add_pose_modal.html' %}
+
+    {% include 'yogit/login_modal.html' %}
+
+    {% include 'yogit/signup_modal.html' %}
+
+{% endblock %}

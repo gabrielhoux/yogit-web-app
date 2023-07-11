@@ -1,0 +1,48 @@
+<div id="pose-details-view">
+    <section class="section">
+        <a class="button is-white is-rounded" id="return"><i class="fa-solid fa-arrow-left fa-2xl"></i></a>
+        <div class="columns is-desktop">
+            <div class="column">
+                <figure class="image is-16by9" id="pose-image-container">
+                    <img id="pose-image" src="#">
+                </figure>
+            </div>
+            <div class="column">
+                <div id="pose-details-body" class="content">
+                    <div class="columns is-desktop is-vcentered">
+                        <div class="column">
+                            <h1 class="title" id="pose-title">
+                            </h1>
+                            <p class="subtitle" id="pose-sanskrit">
+                            </p>
+                        </div>
+                        <div class="column">
+                            {% if user.is_authenticated %}
+                            <button id="save-pose" class="button is-primary">
+                                Save pose
+                            </button>
+                            {% else %}
+                            <a class="button is-light" id="login" href="#" data-target="login-modal">
+                                Log in to save this pose
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <p>
+                        <b><span id="pose-difficulty"></span></b>
+                        •
+                        <em><span id="pose-types"></span></em>
+                    </p>
+                    <h2>Description</h2>
+                    <p id="pose-description"></p>
+                    <h2>Benefits</h2>
+                    <p id="pose-benefits"></p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2>Videos</h2>
+            <div class="columns is-multiline is-desktop" id="youtube-search-results"></div>
+        </div>
+    </section>
+</div>
