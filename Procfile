@@ -1,1 +1,3 @@
-web: python manage.py runserver
+web: gunicorn yogit.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
