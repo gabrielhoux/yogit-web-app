@@ -4,6 +4,8 @@ Yogit is my submission for Capstone, CS50W's final project. It's a web app desig
 
 Most of the yoga poses data was sourced from [Alex Cumplido's Yoga API](https://github.com/alexcumplido/yoga-api).
 
+You can visit and use this web app [here via Heroku](https://yogit-e75d4288ce2f.herokuapp.com/).
+
 # BACK-END
 
 ## load_yoga_poses.py
