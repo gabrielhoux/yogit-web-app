@@ -4,6 +4,9 @@ import { editSequence, deleteSequence, loadPosesModal, removePoseFromSequence } 
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // By default, load index
+    loadIndex();
+
     // Load all poses when clicking on a #view-poses button
     document.querySelectorAll('#view-poses').forEach(button =>
         button.addEventListener('click', () => {
@@ -40,9 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load index when clicking on a #view-index button
     document.querySelector('#view-index').addEventListener('click', loadIndex);
-
-    // By default, load index
-    loadIndex();
 
 });
 
