@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set click event listeners for save and return buttons on pose-details-view
     const saveButton = document.querySelector('#save-pose');
-    saveButton.addEventListener('click', () => {
-        savePose(saveButton);
-    });
+    if (saveButton) {
+        saveButton.addEventListener('click', () => {
+            savePose(saveButton);
+        });
+    }
     const returnButton = document.querySelector('#return');
     returnButton.addEventListener('click', () => {
         const target = returnButton.dataset.target;
