@@ -1,1 +1,0 @@
-web: gunicorn yogit-web-app.wsgi:application --log-file - --log-level debug
